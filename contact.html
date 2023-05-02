@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reco Rewards</title>
+    
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets\images\favicon.png">
+    <link href="assets\css\style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-transparent" x-data="{showMenu : false}">
+        <nav class="flex justify-between p-6 px-4">
+            <div class="flex lg:justify-evenly md:justify-evenly w-full">
+                <div class="">
+                    <a class="block max-w-max" href="index.html">
+                        <img src="assets\images\reco-automotive-group-small-logo.png" alt="Logo"
+                            class="w-32 md:w-48 lg:w-56">
+                    </a>
+                </div>
+                <div class="flex self-center">
+                    <ul class="hidden xl:flex xl:justify-center">
+                        <li class="mr-6 nav-text"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                                href="index.html">Home</a>
+                        </li>
+                        <li class="mr-6 nav-text"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                                href="about-us.html">About
+                                Us</a>
+                        </li>
+                        <li class="mr-6 nav-text"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                                href="faqs.html">FAQs</a>
+                        </li>
+                        <li class="mr-6 nav-text"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium"
+                                href="contact.html">Contact
+                                Us</a>
+                        </li>
+                        <li class="mr-6"><a class=" btn btn-blue" href="/sign-up">Sign Up</a></li>
+                        <li class="mr-6"><a class="btn btn-outline-blue" href="/login">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-burger self-center xl:hidden" @click.prevent="showMenu = !showMenu "
+                x-show="!showMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <div class="navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50" x-show="showMenu"
+            x-transition.duration.200ms="" style="display: none;">
+            <div class="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
+                <nav class="relative p-6 h-full overflow-y-auto">
+                    <div class="flex flex-col justify-between h-full">
+                        <a class="inline-block" href="index.html">
+                            <img src="assets\images\reco-automotive-group-small-logo.png" alt="Logo"
+                                class="w-32 md:w-32 lg:w-48">
+                        </a>
+                        <ul class="py-6">
+                            <li>
+                                <a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                    href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                    href="about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                    href="faqs.html">FAQs</a>
+                            </li>
+                            <li>
+                                <a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                    href="contact.html">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                        <div class="flex flex-wrap">
+                            <div class="w-full mb-2"><a
+                                    class="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
+                                    href="/login">Log In</a></div>
+                            <div class="w-full"><a
+                                    class="inline-block py-2 px-4 w-full text-sm leading-5 btn btn-blue text-center"
+                                    href="/sign-up">Sign Up</a></div>
+                        </div>
+                    </div>
+                </nav>
+                <a class="navbar-close absolute top-5 p-4 right-3" href="#" @click.prevent="showMenu = !showMenu ">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z"
+                            fill="#78BE21"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="flex flex-col self-center py-10 px-5 w-full max-w-5xl m-auto lg:px-0">
+        <div>
+            <h1 class="mb-5 text-3xl text-center font-bold">FAQs</h1>
+         <form id="contact-form" role="form">
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">First Name *</label>
+                                <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="First Name is required.">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Last Name *</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Last Name is required.">
+                                                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">E-Mail Address *</label>
+                                <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Email Address is required.">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Phone Number *</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Phone Number is required.">
+                                                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_message">Message *</label>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea
+                                    >
+                                </div>
+                            </div>
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                                " value="Send Message" >
+                        </div>
+                    </div>
+            </div>
+             </form>
+             </div>
+    </section>
+    
+    <footer class=" text-white">
+
+        <div class="lg:flex md:flex lg:flex-row md:flex-row flex-col p-10 justify-around bg-gray-800">
+            <div class="md:p-0 lg:p-0 py-10">
+                <p class="text-white">Copyright 2023 Eyefall</p>
+            </div>
+            <div class="flex">
+                <li class="text-white"><a href="/privacy">Privacy Policy</a></li>
+                <span class="mx-3">|</span>
+                <li class="text-white"><a href="/terms">Terms &amp; Conditions</a></li>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
